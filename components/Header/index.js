@@ -153,6 +153,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 <img
+                  alt="mode"
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 ></img>
