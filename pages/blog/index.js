@@ -1,13 +1,14 @@
 import Head from "next/head";
+import Image from "next/image";
 import Router, { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { stagger } from "../../animations";
 import Button from "../../components/Button";
-import Cursor from "../../components/Cursor";
 import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
@@ -63,15 +64,10 @@ const Blog = ({ posts }) => {
   return (
     showBlog.current && (
       <>
-        {data.showCursor && <Cursor />}
         <Head>
           <title>Blog</title>
         </Head>
-        <div
-          className={`container mx-auto mb-10 ${
-            data.showCursor && "cursor-none"
-          }`}
-        >
+        <div className={`container mx-auto mb-10`}>
           <Header isBlog={true}></Header>
           <div className="mt-10">
             <h1
@@ -88,11 +84,12 @@ const Blog = ({ posts }) => {
                     key={post.slug}
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
-                    <img
+                    <Image
+                      layout="fill"
                       className="w-full h-60 rounded-lg shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}
-                    ></img>
+                    ></Image>
                     <h2 className="mt-5 text-4xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">

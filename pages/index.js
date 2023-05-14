@@ -1,15 +1,14 @@
+import Head from "next/head";
+import Link from "next/link";
 import { useRef } from "react";
+import { stagger } from "../animations";
+import Button from "../components/Button";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Cursor from "../components/Cursor";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -26,7 +25,7 @@ export default function Home() {
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
-      top: workRef.current.offsetTop,
+      top: workRef.current.offsetTop - 40,
       left: 0,
       behavior: "smooth",
     });
@@ -34,7 +33,7 @@ export default function Home() {
 
   const handleAboutScroll = () => {
     window.scrollTo({
-      top: aboutRef.current.offsetTop,
+      top: aboutRef.current.offsetTop - 40,
       left: 0,
       behavior: "smooth",
     });
@@ -49,8 +48,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
-      {data.showCursor && <Cursor />}
+    <div className={`relative`}>
       <Head>
         <title>{data.name}</title>
       </Head>

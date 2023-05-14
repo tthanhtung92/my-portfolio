@@ -1,12 +1,11 @@
+import { useTheme } from "next-themes";
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Button from "../components/Button";
 import Header from "../components/Header";
-import { v4 as uuidv4 } from "uuid";
-import { useTheme } from "next-themes";
 
 // Data
 import yourData from "../data/portfolio.json";
-import Cursor from "../components/Cursor";
 
 const Edit = () => {
   // states
@@ -54,7 +53,7 @@ const Edit = () => {
   };
 
   const deleteProject = (id) => {
-    const copyProjects = data.projects;
+    let copyProjects = data.projects;
     copyProjects = copyProjects.filter((project) => project.id !== id);
     setData({ ...data, projects: copyProjects });
   };
@@ -83,7 +82,7 @@ const Edit = () => {
   };
 
   const deleteService = (id) => {
-    const copyServices = data.services;
+    let copyServices = data.services;
     copyServices = copyServices.filter((service) => service.id !== id);
     setData({ ...data, services: copyServices });
   };
@@ -111,7 +110,7 @@ const Edit = () => {
   };
 
   const deleteSocials = (id) => {
-    const copySocials = data.socials;
+    let copySocials = data.socials;
     copySocials = copySocials.filter((social) => social.id !== id);
     setData({ ...data, socials: copySocials });
   };
@@ -147,9 +146,8 @@ const Edit = () => {
   };
 
   return (
-    <div className={`container mx-auto ${data.showCursor && "cursor-none"}`}>
+    <div className={`container mx-auto`}>
       <Header isBlog></Header>
-      {data.showCursor && <Cursor />}
       <div className="mt-10">
         <div className={`${theme === "dark" ? "bg-transparent" : "bg-white"}`}>
           <div className="flex items-center justify-between">
@@ -321,25 +319,6 @@ const Edit = () => {
                 </Button>
               </div>
             </div>
-            <div className="mt-5 flex items-center">
-              <label className="w-1/5 text-lg opacity-50">Custom Cursor</label>
-              <div className="w-4/5 ml-10 flex items-center">
-                <Button
-                  onClick={() => setData({ ...data, showCursor: true })}
-                  type={data.showCursor && "primary"}
-                >
-                  Yes
-                </Button>
-                <Button
-                  onClick={() => setData({ ...data, showCursor: false })}
-                  classes={
-                    !data.showCursor && "bg-red-500 text-white hover:bg-red-600"
-                  }
-                >
-                  No
-                </Button>
-              </div>
-            </div>
           </div>
         )}
         {/* PROJECTS */}
@@ -495,51 +474,51 @@ const Edit = () => {
             ></textarea>
           </div>
         )}
+
+        {/* Social */}
         {currentTabs === "SOCIAL" && (
           <div className="mt-10">
             {data.socials.map((social, index) => (
-              <>
-                <div key={social.id}>
-                  <div className="flex items-center justify-between">
-                    <h1 className="text-2xl">{social.title}</h1>
-                    <Button
-                      onClick={() => deleteSocials(social.id)}
-                      type="primary"
-                    >
-                      Delete
-                    </Button>
-                  </div>
-                  <div className="flex items-center mt-5">
-                    <label className="w-1/5 text-lg opacity-50">Title</label>
-                    <input
-                      value={social.title}
-                      onChange={(e) =>
-                        editSocials(index, {
-                          ...social,
-                          title: e.target.value,
-                        })
-                      }
-                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"
-                    ></input>
-                  </div>
-                  <div className="flex items-center mt-5">
-                    <label className="w-1/5 text-lg opacity-50">Link</label>
-                    <input
-                      value={social.link}
-                      onChange={(e) =>
-                        editSocials(index, {
-                          ...social,
-                          link: e.target.value,
-                        })
-                      }
-                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"
-                    />
-                  </div>
-                  <hr className="my-10"></hr>
+              <div key={index}>
+                <div className="flex items-center justify-between">
+                  <h1 className="text-2xl">{social.title}</h1>
+                  <Button
+                    onClick={() => deleteSocials(social.id)}
+                    type="primary"
+                  >
+                    Delete
+                  </Button>
                 </div>
-              </>
+                <div className="flex items-center mt-5">
+                  <label className="w-1/5 text-lg opacity-50">Title</label>
+                  <input
+                    value={social.title}
+                    onChange={(e) =>
+                      editSocials(index, {
+                        ...social,
+                        title: e.target.value,
+                      })
+                    }
+                    className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                    type="text"
+                  ></input>
+                </div>
+                <div className="flex items-center mt-5">
+                  <label className="w-1/5 text-lg opacity-50">Link</label>
+                  <input
+                    value={social.link}
+                    onChange={(e) =>
+                      editSocials(index, {
+                        ...social,
+                        link: e.target.value,
+                      })
+                    }
+                    className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                    type="text"
+                  />
+                </div>
+                <hr className="my-10"></hr>
+              </div>
             ))}
             <div className="my-10">
               <Button onClick={addSocials} type="primary">
@@ -548,6 +527,8 @@ const Edit = () => {
             </div>
           </div>
         )}
+
+        {/* Resume */}
         {currentTabs === "RESUME" && (
           <div className="mt-10">
             <h1>Main</h1>
