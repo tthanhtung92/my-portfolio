@@ -129,7 +129,7 @@ const Edit = () => {
             dates: "Enter Dates",
             type: "Full Time",
             position: "Frontend Engineer at X",
-            bullets: ["Worked on the frontend of a React application"],
+            bullets: "Work1, Work2",
           },
         ],
       },
@@ -143,6 +143,15 @@ const Edit = () => {
       ...data,
       resume: { ...data.resume, experiences: copyExperiences },
     });
+  };
+
+  const deleteExperiences = (id) => {
+    let copyExperiences = data.resume.experiences;
+    copyExperiences = copyExperiences.filter(
+      (experiences) => experiences.id !== id
+    );
+    console.log(copyExperiences);
+    setData({ ...data, experiences: copyExperiences });
   };
 
   return (
@@ -568,7 +577,7 @@ const Edit = () => {
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{experiences.position}</h1>
                     <Button
-                      // onClick={() => deleteProject(project.id)}
+                      onClick={() => deleteExperiences(experiences.id)}
                       type="primary"
                     >
                       Delete

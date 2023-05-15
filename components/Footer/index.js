@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import Button from "../Button";
 import Socials from "../Socials";
 
 const Footer = ({}) => {
@@ -16,7 +14,7 @@ const Footer = ({}) => {
             <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
               TOGETHER
             </h1>
-            <Button type="primary">Schedule a call</Button>
+            {/* <Button type="primary">Schedule a call</Button> */}
             <div className="mt-10">
               <Socials />
             </div>
@@ -24,8 +22,7 @@ const Footer = ({}) => {
         </div>
       </div>
       <h1 className="text-sm text-bold mt-2 laptop:mt-10 p-2 laptop:p-0">
-        Made With ❤ by{" "}
-        <Link href="https://www.facebook.com/tthanhtung92/">Thanh Tung</Link>
+        Made With ❤ by me
       </h1>
     </>
   );

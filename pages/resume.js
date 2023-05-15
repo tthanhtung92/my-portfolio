@@ -39,7 +39,7 @@ const Resume = () => {
             >
               <h1 className="text-3xl font-bold">{data.name}</h1>
               <h2 className="text-xl mt-5">{data.resume.tagline}</h2>
-              <h2 className="w-4/5 text-xl mt-5 opacity-50">
+              <h2 className="w-4/5 text-xl mt-5 opacity-50 text-justify">
                 {data.resume.description}
               </h2>
               <div className="mt-2">
@@ -63,7 +63,9 @@ const Resume = () => {
               <div className="mt-5">
                 <h1 className="text-2xl font-bold">Education</h1>
                 <div className="mt-2">
-                  <h2 className="text-lg">{data.resume.education.universityName}</h2>
+                  <h2 className="text-lg">
+                    {data.resume.education.universityName}
+                  </h2>
                   <h3 className="text-sm opacity-75">
                     {data.resume.education.universityDate}
                   </h3>
