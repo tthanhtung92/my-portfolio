@@ -54,7 +54,7 @@
       "universityDate": "2018-2023",
       "universityPara": "Major: Software Engineering"
     },
-    "languages": ["Javascript", "Typescript", "HTML", "CSS"],
+    "languages": ["Javascript", "HTML", "CSS"],
     "frameworks": ["ReactJS", "NextJS"],
     "others": ["Figma", "Git", "Redux Toolkit, MUI"]
   },
