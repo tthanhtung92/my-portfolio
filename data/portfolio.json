@@ -1,1 +1,70 @@
-{"name":"Thanh Tung","headerTaglineOne":"Hello 👋","headerTaglineTwo":"I'm Thanh Tung","headerTaglineThree":"Front-End Developer","headerTaglineFour":"from Ho Chi Minh City","showBlog":false,"darkMode":true,"showResume":true,"socials":[{"id":"1","title":"Github","link":"https://github.com/tthanhtung92"},{"id":"1a000dca-f52c-4d60-956f-63901bfb8665","title":"Facebook","link":"https://www.facebook.com/tthanhtung92/"}],"projects":[{"id":"1","title":"Bookly - Online Book Store","description":"Web Front-End","imageSrc":"https://images.unsplash.com/photo-1463320726281-696a485928c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80","url":"https://github.com/tthanhtung92/book-store-management"}],"services":[{"id":"1","title":"UI/UX Design","description":"I'm responsible for the design and implementation of all the experiences a user has when interacting with a digital tool, such as a website."},{"id":"3","title":"Web Develop","description":"Using knowledge of programming to code user-side applications, including visual elements, overall layout of websites or web applications. I create user-friendly web pages, maintain and improve websites, optimize applications for speed, collaborate with back-end developers and web designers to improve usability, get feedback from, and build solutions for users and customers."}],"aboutpara":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.","resume":{"tagline":"👋  I'm a software engineer.","description":"Front-end Developer with 6 months experience at FPT University in designing and building up commercial and personal websites for users. Passionate about learning and development with a desire to apply skills on a larger development team at business. Eager to tackle more complex problems and continue to find ways to maximize user efficiency.","experiences":[{"id":"1","dates":"March 2022 - Present","type":"Anytime","position":"Frontend Engineer at FPT University","bullets":"Design UI/UX, Working with React, Manage team project"}],"education":{"universityName":"FPT University","universityDate":"2018-2023","universityPara":"Major: Software Engineering"},"languages":["Javascript","Typescript","HTML","CSS"],"frameworks":["ReactJS","NextJS"],"others":["Figma","Git","Redux Toolkit, MUI"]},"experiences":[{"id":"1","dates":"March 2022 - Present","type":"Anytime","position":"Frontend Engineer at FPT University","bullets":"Design UI/UX, Working with React, Manage team project (deploy and timeline)"}]}
+{
+  "name": "Thanh Tung",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Thanh Tung",
+  "headerTaglineThree": "Front-End Developer",
+  "headerTaglineFour": "from Ho Chi Minh City",
+  "showBlog": false,
+  "darkMode": true,
+  "showResume": true,
+  "socials": [
+    { "id": "1", "title": "Github", "link": "https://github.com/tthanhtung92" },
+    {
+      "id": "1a000dca-f52c-4d60-956f-63901bfb8665",
+      "title": "Facebook",
+      "link": "https://www.facebook.com/tthanhtung92/"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Bookly - Online Book Store",
+      "description": "Web Front-End",
+      "imageSrc": "https://images.unsplash.com/photo-1463320726281-696a485928c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "url": "https://github.com/tthanhtung92/book-store-management"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "UI/UX Design",
+      "description": "I'm responsible for the design and implementation of all the experiences a user has when interacting with a digital tool, such as a website."
+    },
+    {
+      "id": "3",
+      "title": "Web Develop",
+      "description": "Using knowledge of programming to code user-side applications, including visual elements, overall layout of websites or web applications. I create user-friendly web pages, maintain and improve websites, optimize applications for speed, collaborate with back-end developers and web designers to improve usability, get feedback from, and build solutions for users and customers."
+    }
+  ],
+  "aboutpara": "I am a Front-end Developer with 6 months experience at FPT University in designing and building up commercial and personal websites for users. Passionate about learning and development with a desire to apply skills on a larger development team at business. Eager to tackle more complex problems and continue to find ways to maximize user efficiency.",
+  "resume": {
+    "tagline": "👋  I'm a software engineer.",
+    "description": "Front-end Developer with 6 months experience at FPT University in designing and building up commercial and personal websites for users. Passionate about learning and development with a desire to apply skills on a larger development team at business. Eager to tackle more complex problems and continue to find ways to maximize user efficiency.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "March 2022 - Present",
+        "type": "Anytime",
+        "position": "Frontend Engineer at FPT University",
+        "bullets": "Design UI/UX, Working with React, Manage team project"
+      }
+    ],
+    "education": {
+      "universityName": "FPT University",
+      "universityDate": "2018-2023",
+      "universityPara": "Major: Software Engineering"
+    },
+    "languages": ["Javascript", "Typescript", "HTML", "CSS"],
+    "frameworks": ["ReactJS", "NextJS"],
+    "others": ["Figma", "Git", "Redux Toolkit, MUI"]
+  },
+  "experiences": [
+    {
+      "id": "1",
+      "dates": "March 2022 - Present",
+      "type": "Anytime",
+      "position": "Frontend Engineer at FPT University",
+      "bullets": "Design UI/UX, Working with React, Manage team project (deploy and timeline)"
+    }
+  ]
+}
