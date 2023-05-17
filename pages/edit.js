@@ -459,7 +459,7 @@ const Edit = () => {
                           description: e.target.value,
                         })
                       }
-                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                      className="w-4/5 ml-10 p-2 h-32 rounded-md shadow-lg border-2"
                     ></textarea>
                   </div>
                   <hr className="my-10"></hr>
@@ -570,7 +570,8 @@ const Edit = () => {
             </div>
             <hr className="my-10"></hr>
 
-            <h1>Experiences</h1>
+            {/* Project------------------------------------------- */}
+            <h1>Projects</h1>
             <div className="mt-10">
               {data.resume.experiences.map((experiences, index) => (
                 <div className="mt-5" key={experiences.id}>
@@ -599,7 +600,7 @@ const Edit = () => {
                     ></input>
                   </div>
                   <div className="flex items-center mt-2">
-                    <label className="w-1/5 text-lg opacity-50">Type</label>
+                    <label className="w-1/5 text-lg opacity-50">Position</label>
                     <input
                       value={experiences.type}
                       onChange={(e) =>
@@ -613,7 +614,7 @@ const Edit = () => {
                     ></input>
                   </div>
                   <div className="flex items-center mt-2">
-                    <label className="w-1/5 text-lg opacity-50">Position</label>
+                    <label className="w-1/5 text-lg opacity-50">Name</label>
                     <input
                       value={experiences.position}
                       onChange={(e) =>
@@ -648,7 +649,7 @@ const Edit = () => {
             </div>
             <div className="my-10">
               <Button onClick={handleAddExperiences} type="primary">
-                Add Experience +
+                Add Project +
               </Button>
             </div>
             <hr className="my-10"></hr>

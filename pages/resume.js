@@ -1,7 +1,6 @@
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import Button from "../components/Button";
 import Header from "../components/Header";
 import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
@@ -18,7 +17,7 @@ const Resume = () => {
     if (!data.showResume) {
       router.push("/");
     }
-  }, []);
+  }, [router]);
   return (
     <>
       {/* {process.env.NODE_ENV === "development" && (
@@ -39,14 +38,14 @@ const Resume = () => {
             >
               <h1 className="text-3xl font-bold">{data.name}</h1>
               <h2 className="text-xl mt-5">{data.resume.tagline}</h2>
-              <h2 className="w-4/5 text-xl mt-5 opacity-50 text-justify">
+              <h2 className="w-full text-xl mt-5 opacity-50 text-justify">
                 {data.resume.description}
               </h2>
               <div className="mt-2">
                 <Socials />
               </div>
-              <div className="mt-5">
-                <h1 className="text-2xl font-bold">Experience</h1>
+              <div className="mt-8">
+                <h1 className="text-2xl font-bold">Projects</h1>
 
                 {data.resume.experiences.map(
                   ({ id, dates, type, position, bullets }) => (
@@ -60,21 +59,21 @@ const Resume = () => {
                   )
                 )}
               </div>
-              <div className="mt-5">
+              <div className="mt-8">
                 <h1 className="text-2xl font-bold">Education</h1>
                 <div className="mt-2">
-                  <h2 className="text-lg">
+                  <span className="text-xl">
                     {data.resume.education.universityName}
-                  </h2>
-                  <h3 className="text-sm opacity-75">
+                  </span>
+                  <span className="ml-4 text-sm opacity-75">
                     {data.resume.education.universityDate}
-                  </h3>
-                  <p className="text-sm mt-2 opacity-50">
+                  </span>
+                  <p className="text-md mt-2 opacity-50">
                     {data.resume.education.universityPara}
                   </p>
                 </div>
               </div>
-              <div className="mt-5">
+              <div className="mt-8">
                 <h1 className="text-2xl font-bold">Skills</h1>
                 <div className="flex mob:flex-col desktop:flex-row justify-between">
                   {data.resume.languages && (
