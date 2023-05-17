@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 import { stagger } from "../animations";
-import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
@@ -60,7 +59,6 @@ export default function Home() {
       <Head>
         <title>{data.name}</title>
       </Head>
-
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
@@ -70,6 +68,7 @@ export default function Home() {
           handleAboutScroll={handleAboutScroll}
           handleContactScroll={handleContactScroll}
         />
+
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
             <h1
