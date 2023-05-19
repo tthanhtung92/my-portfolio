@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Button from "../components/Button";
 import { useRef } from "react";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
